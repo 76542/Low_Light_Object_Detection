@@ -3,19 +3,7 @@ Enhance, super-resolve, and detect objects in challenging low-light scenes with 
 Uses Zero-DCE for illumination correction, ESRGAN/SRGAN for upscaling, and YOLOv8 for robust object detection.
 
 # Pipeline Overview
-Input Image (Low Light)
-      │
-      ▼
-[Zero-DCE] — Low-Light Enhancement
-      │
-      ▼
-[ESRGAN/SRGAN] — Super-Resolution
-      │
-      ▼
-[YOLOv8] — Object Detection (COCO classes)
-      │
-      ▼
-Output: Enhanced, High-Res Image with Detected Objects (bounding boxes)
+Low-Light Image → **Zero-DCE** (Enhance) → **SRGAN/ESRGAN** (Super-Resolve) → **YOLOv8** (Detect Objects) → **Final Output**
 
 # Features
 Zero-DCE: State-of-the-art deep curve estimation for unsupervised low-light enhancement (Zero-DCE Paper).
@@ -66,7 +54,6 @@ Copy
 Edit
 python pipeline/srgan.py
 Input: data/test/enhanced/your_image.jpeg
-
 Output: data/test/srgan/your_image.jpeg
 
 5. Object Detection (YOLOv8)
@@ -75,7 +62,6 @@ Copy
 Edit
 python pipeline/yolo.py
 Input: data/test/srgan/your_image.jpeg (or use enhanced output directly)
-
 Output: data/test/yolo/your_image.jpeg (with bounding boxes)
 
 # Training Zero-DCE (Optional)
