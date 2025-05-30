@@ -66,12 +66,10 @@ Output: data/test/yolo/your_image.jpeg (with bounding boxes)
 
 # Training Zero-DCE (Optional)
 To train Zero-DCE on the LOL dataset:
-
-bash
-Copy
-Edit
+```
 python train_zerodce.py
 Saves model checkpoints to weights/
+```
 
 # Customization
 SRGAN/ESRGAN: Swap with any generator weights. Use your own images for super-resolution.
