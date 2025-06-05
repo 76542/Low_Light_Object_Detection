@@ -1,39 +1,38 @@
-# Ignore Python cache files
+# Python cache
 __pycache__/
 *.py[cod]
 *.so
 
-# Ignore virtual environment
+# Virtual environments
 venv/
 myvenv/
 ENV/
 env/
 .venv/
 
-# Ignore macOS system files
+# macOS system files
 .DS_Store
 
-# Ignore Jupyter Notebook checkpoints (if any)
+# Jupyter Notebook checkpoints (if any)
 .ipynb_checkpoints
 
-# Ignore log files and outputs
+# Logs and outputs
 *.log
 *.out
 
-# Ignore model checkpoints and weights
-checkpoints/
-*.pth
-*.pt
-*.h5
+# Model weights (do NOT ignore checkpoints)
+# *.pth
+# *.pt
+# *.h5
 
-# Ignore large data folders (add more if needed)
+# Data folders (uncomment below if you want to ignore large data)
 data/
 datasets/
 
-# Ignore images and outputs (add more as needed)
+# Images and outputs (add more if needed)
 *.png
 *.jpg
 *.jpeg
 
-# Ignore VS Code settings
+# VS Code settings
 .vscode/
