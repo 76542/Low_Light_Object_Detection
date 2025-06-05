@@ -26,13 +26,10 @@ env/
 # *.h5
 
 # Data folders (uncomment below if you want to ignore large data)
-data/
-datasets/
+
 
 # Images and outputs (add more if needed)
-*.png
-*.jpg
-*.jpeg
+#
 
 # VS Code settings
 .vscode/
