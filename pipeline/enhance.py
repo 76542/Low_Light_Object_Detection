@@ -6,7 +6,6 @@ import numpy as np
 from PIL import Image
 from torchvision import transforms
 
-# 🔧 Add root directory to path so we can import from models/
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(ROOT_DIR)
 
@@ -91,8 +90,8 @@ if __name__ == "__main__":
     model = load_model(model_path, device)
 
     # Enhance a test image
-    input_img = os.path.join(ROOT_DIR, "test.png")
-    output_img = os.path.join(ROOT_DIR, "enhanced_test.png")
+    input_img = os.path.join(ROOT_DIR, "test.jpg")
+    output_img = os.path.join(ROOT_DIR, "enhanced_test.jpg")
     enhance_image(model, input_img, output_img)
 
     # Uncomment to test webcam or video
