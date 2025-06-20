@@ -10,16 +10,17 @@ import cv2
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(ROOT_DIR)
 
-from models.srgan.generator import Generator
+from models.srgan.generator import SRGANGenerator
 
 # ---------------------------------------
 # Load the trained SRGAN generator model
 # ---------------------------------------
 def load_generator(ckpt_path, device):
-    model = Generator()
+    model = SRGANGenerator()
     model.load_state_dict(torch.load(ckpt_path, map_location=device))
     model.to(device).eval()
     return model
+
 
 # ---------------------------------------
 # Upscale an image using SRGAN generator
@@ -54,7 +55,7 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # Path to trained generator
-    generator_ckpt = os.path.join(ROOT_DIR, "checkpoints/srgan/generator_epoch_10.pth")
+    generator_ckpt = os.path.join(ROOT_DIR, "checkpoints/srgan/generator_epoch_20.pth")
 
     # Input: enhanced image from Zero-DCE
     input_image = os.path.join(ROOT_DIR, "test_lr.png")
