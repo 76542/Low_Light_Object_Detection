@@ -1,0 +1,4 @@
+Model,NIQE,BRISQUE,PIQE,Laplacian_Variance,Gradient_Magnitude,Entropy,RMS_Contrast,Quality_Score,NIQE_Rank,BRISQUE_Rank,PIQE_Rank,Sharpness_Rank,Edge_Rank,Entropy_Rank,Contrast_Rank,Overall_Rank,Total_Rank_Score,Final_Rank
+Bicubic,10.56,4.3697,16.5882,164.7429,64.3213,7.3594,54.3047,2.4165,3.0,2.0,3.0,2.0,1.0,3.0,3.0,2.0,17.0,3.0
+ESRGAN,8.9752,6.747,14.5283,320.7828,51.881,7.3883,56.3352,2.4355,2.0,3.0,2.0,1.0,2.0,2.0,1.0,1.0,13.0,2.0
+SRCNN,8.8675,3.9397,13.7213,115.0132,47.7006,7.3889,55.8233,2.2609,1.0,1.0,1.0,3.0,3.0,1.0,2.0,3.0,12.0,1.0

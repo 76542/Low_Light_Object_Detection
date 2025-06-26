@@ -36,7 +36,7 @@ def upscale_image(model, image_path, save_path=None):
 if __name__ == "__main__":
     device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
     generator_ckpt = os.path.join("models", "esrgan", "generator.pth")
-    input_image = "image.jpg"  # or your Zero-DCE enhanced + downsampled image
-    output_image = "image_sr_output.jpg"
+    input_image = "enhanced_test.png"  # or your Zero-DCE enhanced + downsampled image
+    output_image = "esrgan_test.png"
     model = load_generator(generator_ckpt, device)
     upscale_image(model, input_image, output_image)

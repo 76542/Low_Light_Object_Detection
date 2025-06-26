@@ -16,7 +16,7 @@ from models.zero_dce.model import ZeroDCE
 # --------------------------------------------
 def load_model(ckpt_path, device):
     model = ZeroDCE()
-    model.load_state_dict(torch.load(ckpt_path, map_location=device))
+    model.load_state_dict(torch.load(ckpt_path, map_location="cpu"))  # force CPU
     model.to(device).eval()
     return model
 
@@ -90,8 +90,8 @@ if __name__ == "__main__":
     model = load_model(model_path, device)
 
     # Enhance a test image
-    input_img = os.path.join(ROOT_DIR, "test.jpg")
-    output_img = os.path.join(ROOT_DIR, "enhanced_test.jpg")
+    input_img = os.path.join(ROOT_DIR, "test.png")
+    output_img = os.path.join(ROOT_DIR, "enhanced_test.png")
     enhance_image(model, input_img, output_img)
 
     # Uncomment to test webcam or video

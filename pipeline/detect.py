@@ -43,7 +43,7 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     model_path = "weights/yolov8s.pt"
-    input_image = "image.jpg"
-    output_image_path = "yolo_output.png"  # Save as file, not folder
+    input_image = "upscaled_coastguard.png"
+    output_image_path = "yolo_coastguard.png"  
     run_yolo_person_detection(model_path, input_image, output_image_path)
     print("Detection complete.")
